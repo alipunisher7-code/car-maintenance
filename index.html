@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1a1a2e">
+  <title>نگهداری خودرو</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="pin-screen" class="screen active">
+      <div class="pin-container">
+        <div class="app-logo">🚗</div>
+        <h1>نگهداری خودرو</h1>
+        <p class="subtitle">کد PIN را وارد کنید</p>
+        <div class="pin-dots" id="pin-dots">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="pin-pad">
+          <button class="pin-btn" data-n="1">۱</button>
+          <button class="pin-btn" data-n="2">۲</button>
+          <button class="pin-btn" data-n="3">۳</button>
+          <button class="pin-btn" data-n="4">۴</button>
+          <button class="pin-btn" data-n="5">۵</button>
+          <button class="pin-btn" data-n="6">۶</button>
+          <button class="pin-btn" data-n="7">۷</button>
+          <button class="pin-btn" data-n="8">۸</button>
+          <button class="pin-btn" data-n="9">۹</button>
+          <button class="pin-btn pin-clear" id="pin-clear">✕</button>
+          <button class="pin-btn" data-n="0">۰</button>
+          <button class="pin-btn pin-del" id="pin-del">⌫</button>
+        </div>
+        <p class="pin-error" id="pin-error"></p>
+        <button class="link-btn" id="setup-pin-link">تنظیم PIN جدید</button>
+      </div>
+    </div>
+
+    <div id="main-screen" class="screen">
+      <header class="app-header">
+        <button class="icon-btn" id="menu-btn">☰</button>
+        <h2 id="header-title">خودروهای من</h2>
+        <button class="icon-btn" id="add-btn">+</button>
+      </header>
+
+      <nav id="side-menu" class="side-menu hidden">
+        <div class="menu-header">
+          <span>منو</span>
+          <button class="icon-btn" id="close-menu">✕</button>
+        </div>
+        <ul>
+          <li><a href="#" data-view="vehicles">🚗 خودروها</a></li>
+          <li><a href="#" data-view="parts">🔧 قطعات</a></li>
+          <li><a href="#" data-view="backup">💾 بک‌آپ</a></li>
+          <li><a href="#" data-view="settings">⚙️ تنظیمات</a></li>
+        </ul>
+      </nav>
+
+      <main id="view-container"></main>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
