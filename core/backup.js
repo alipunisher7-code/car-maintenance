@@ -1,4 +1,4 @@
-import { db } from './db.js';
+import { db } from '../db.js';
 import { encrypt, decrypt } from './crypto.js';
 
 export async function exportBackup(pin) {
